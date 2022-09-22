@@ -1,11 +1,9 @@
-import Navbar from './components/Navbar';
+import Header from './components/Header';
 
 const App = () => (
-  <div>
-    <header>
-      <Navbar />
-    </header>
-  </div>
+  <>
+    <Header />
+  </>
 );
 
 export default App;

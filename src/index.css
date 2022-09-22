@@ -2,22 +2,38 @@
 
 @tailwind base;
 @tailwind components;
-
-/* Navbar */
-.navbar {
-  @apply flex items-center mx-8 my-4 text-secondary font-epilogue text-sm;
-}
-
-.navbar__links {
-  @apply flex items-center;
-}
-
-.navbar__links:last-child {
-  margin-right: 0;
-}
-
-.btn--navbar {
-  @apply ml-10 border border-primary inline-block px-5 py-2 rounded-lg;
-}
-
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white-100 text-secondary font-epilogue text-sm;
+  }
+}
+
+@layer components {
+  .menu-items:hover {
+    @apply text-primary;
+  }
+
+  .btn-navbar {
+    @apply ml-10 border-2 border-secondary inline-block px-5 py-2 rounded-lg;
+  }
+
+  .btn-navbar:hover {
+    @apply text-primary border-2 border-primary;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white border-2 px-6 py-3 inline-block rounded-lg mt-10 transition-all;
+  }
+
+  .btn-primary:hover {
+    @apply bg-white-100 text-primary border-2 border-primary;
+  }
+}
+
+@layer utilities {
+  .dropdown-shadow {
+    box-shadow: 0px 0px 16px 1px rgba(0, 0, 0, 0.2);
+  }
+}
